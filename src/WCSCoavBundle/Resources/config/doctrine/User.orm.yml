@@ -1,0 +1,20 @@
+WCSCoavBundle\Entity\User:
+    type: entity
+    table: null
+    repositoryClass: WCSCoavBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
+
+    manyToMany:
+            reservations:
+                targetEntity: WCSCoavBundle\Entity\Reservation
+                inversedBy: passengers

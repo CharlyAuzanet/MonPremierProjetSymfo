@@ -26,3 +26,8 @@ WCSCoavBundle\Entity\PlaneModel:
             type: string
             length: 255
     lifecycleCallbacks: {  }
+
+    oneToMany:
+        planemodels :
+            targetEntity: WCSCoavBundle\Entity\Planemodel
+            mappedBy: planemodel

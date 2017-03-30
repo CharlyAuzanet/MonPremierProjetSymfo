@@ -7,6 +7,7 @@
         <thead>
             <tr>
                 <th>Id</th>
+                <th>Title</th>
                 <th>Name</th>
                 <th>Nbseats</th>
                 <th>Actions</th>
@@ -16,6 +17,7 @@
         {% for reservation in reservations %}
             <tr>
                 <td><a href="{{ path('reservation_show', { 'id': reservation.id }) }}">{{ reservation.id }}</a></td>
+                <td>{{ reservation.title }}</td>
                 <td>{{ reservation.name }}</td>
                 <td>{{ reservation.nbSeats }}</td>
                 <td>
